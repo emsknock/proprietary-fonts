@@ -1,0 +1,10 @@
+result
+result-*
+
+.direnv
+
+data/**/*
+!data/*.age
+!data/*.jpg
+
+key.txt
