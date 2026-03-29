@@ -61,6 +61,23 @@ Not today, NCA. Try [pirating some other fonts instead](https://hackaday.com/202
 
 </details>
 
+### Testing the package builds without adding them to system config
+
+In `nix repl`:
+```nix
+# Load this flake
+:lf github:emsknock/proprietary-fonts
+
+# Or, if you've cloned this repo
+:lf .
+
+# Build a package
+:b packages.x86_64-linux.dank-mono.override { key = "AGE-SECRET-KEY…"; }
+
+# This derivation produced the following outputs:
+# out -> /nix/store/nevergonnagiveyouupnevergonnalet-dank-mono-1.000
+```
+
 ## Adding fonts
 
 To add a font named `foobar`, create a directory `data/foobar/` and move your
