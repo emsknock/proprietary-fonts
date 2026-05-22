@@ -2,7 +2,7 @@
 	inputs.nixpkgs.url = "github:nixos/nixpkgs";
 	outputs = inputs: let
 		system = "x86_64-linux";
-		font = ["mono-lisa" "dank-mono"];
+		font = ["mono-lisa" "dank-mono" "apple-emoji"];
 		pkgs = import inputs.nixpkgs {inherit system;};
 		make = font-name: {
 			lib,
